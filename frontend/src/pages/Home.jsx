@@ -18,7 +18,7 @@ const Home = () => {
           <CardMedia
             component="img"
             height="400"
-            image="/a.jpeg"
+            image="/a.png"
             alt="Adventure Hero"
             sx={{
               objectFit: 'cover',
@@ -69,7 +69,7 @@ const Home = () => {
                 overflow: 'hidden',
                 minHeight: 260,
                 boxShadow: 3,
-                backgroundImage: "url('/b.jpeg')",
+                backgroundImage: "url('/b.png')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',
@@ -120,7 +120,7 @@ const Home = () => {
                 overflow: 'hidden',
                 minHeight: 260,
                 boxShadow: 3,
-                backgroundImage: "url('/c.jpeg')",
+                backgroundImage: "url('/c.png')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',
@@ -171,7 +171,7 @@ const Home = () => {
                 overflow: 'hidden',
                 minHeight: 260,
                 boxShadow: 3,
-                backgroundImage: "url('/d.jpeg')",
+                backgroundImage: "url('/d.png')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',

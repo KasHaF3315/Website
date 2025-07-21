@@ -54,7 +54,7 @@ const Adventure = () => {
         <CardMedia
           component="img"
           height="400"
-          image="/a.jpeg"
+          image="/a.png"
           alt={adventureDetails.title}
           sx={{
             borderRadius: 2,
