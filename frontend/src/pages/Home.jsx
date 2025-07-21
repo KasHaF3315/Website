@@ -4,12 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import WeatherWidget from '../components/WeatherWidget';
 import LocationExplorer from '../components/LocationExplorer';
 
-// Import images
-import heroImage from '../assets/a.jpeg';
-import routeImage from '../assets/b.jpeg';
-import offlineImage from '../assets/c.jpeg';
-import communityImage from '../assets/d.jpeg';
-
 const Home = () => {
   const navigate = useNavigate();
   const [selectedCity, setSelectedCity] = useState(null);
@@ -24,7 +18,7 @@ const Home = () => {
           <CardMedia
             component="img"
             height="400"
-            image={heroImage}
+            image="/a.jpeg"
             alt="Adventure Hero"
             sx={{
               objectFit: 'cover',
@@ -75,7 +69,7 @@ const Home = () => {
                 overflow: 'hidden',
                 minHeight: 260,
                 boxShadow: 3,
-                backgroundImage: `url(${routeImage})`,
+                backgroundImage: "url('/b.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',
@@ -126,7 +120,7 @@ const Home = () => {
                 overflow: 'hidden',
                 minHeight: 260,
                 boxShadow: 3,
-                backgroundImage: `url(${offlineImage})`,
+                backgroundImage: "url('/c.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',
@@ -177,7 +171,7 @@ const Home = () => {
                 overflow: 'hidden',
                 minHeight: 260,
                 boxShadow: 3,
-                backgroundImage: `url(${communityImage})`,
+                backgroundImage: "url('/d.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',

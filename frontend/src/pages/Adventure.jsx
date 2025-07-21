@@ -13,7 +13,6 @@ import {
   Rating,
   Divider
 } from '@mui/material';
-import heroImage from '../assets/a.jpeg';
 
 const Adventure = () => {
   const [rating, setRating] = useState(0);
@@ -55,7 +54,7 @@ const Adventure = () => {
         <CardMedia
           component="img"
           height="400"
-          image={heroImage}
+          image="/a.jpeg"
           alt={adventureDetails.title}
           sx={{
             borderRadius: 2,

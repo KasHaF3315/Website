@@ -1,15 +1,12 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Card, CardContent, CardMedia } from '@mui/material';
-import routeImage from '../assets/b.jpeg';
-import offlineImage from '../assets/c.jpeg';
-import communityImage from '../assets/d.jpeg';
 
 const Features = () => {
   const features = [
     {
       title: 'Smart Route Planning',
       description: 'Our AI-powered system analyzes your preferences, fitness level, and time constraints to create the perfect adventure route. Get personalized recommendations based on your interests and previous adventures.',
-      image: routeImage,
+      image: '/b.jpeg',
       details: [
         'AI-powered route optimization',
         'Personalized recommendations',
@@ -20,7 +17,7 @@ const Features = () => {
     {
       title: 'Offline Navigation',
       description: 'Never worry about losing your way, even without internet connection. Download detailed maps and navigate through the most remote locations with confidence.',
-      image: offlineImage,
+      image: '/c.jpeg',
       details: [
         'Offline map downloads',
         'GPS tracking',
@@ -31,7 +28,7 @@ const Features = () => {
     {
       title: 'Explorer Community',
       description: 'Connect with fellow adventurers, share experiences, and discover hidden gems. Join local groups, participate in events, and make new friends who share your passion for exploration.',
-      image: communityImage,
+      image: '/d.jpeg',
       details: [
         'Community forums',
         'Event organization',
