@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - QuestMate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6a0dad;
+      --primary-light: #9c27b0;
+      --primary-dark: #4a148c;
+      --secondary-color: #e1bee7;
+    }
+    
+    body {
+      background-color: #f8f9fa;
+    }
+    
+    .navbar {
+      background-color: var(--primary-dark) !important;
+    }
+    
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+    
+    .nav-link.active {
+      font-weight: bold;
+      background-color: var(--primary-light);
+      border-radius: 5px;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-dark);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+      border-color: var(--primary-color);
+    }
+    
+    .card {
+      border-color: var(--secondary-color);
+      background-color: #E6E6FA; /* Lavender background */
+    }
+    
+    .card-header {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    footer {
+      background-color: var(--primary-dark) !important;
+    }
+    
+    a {
+      color: var(--primary-light);
+    }
+    
+    a:hover {
+      color: var(--primary-dark);
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">QuestMate</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+          <div class="card-body p-4">
+            <h2 class="card-title text-center mb-4">Login</h2>
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required minlength="6">
+                <div class="invalid-feedback">
+                  Password must be at least 6 characters.
+                </div>
+              </div>
+              <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+              <div class="text-center">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Contact Us</h5>
+          <p>ABC@gmail.com</p>
+          <p>12345678</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="features.html" class="text-white">Features</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p>&copy; 2023 QuestMate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

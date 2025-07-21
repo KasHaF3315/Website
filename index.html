@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuestMate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6a0dad;
+      --primary-light: #9c27b0;
+      --primary-dark: #4a148c;
+      --secondary-color: #e1bee7;
+    }
+    
+    .navbar {
+      background-color: var(--primary-dark) !important;
+    }
+    
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+    
+    .nav-link.active {
+      font-weight: bold;
+      background-color: var(--primary-light);
+      border-radius: 5px;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-dark);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+      border-color: var(--primary-color);
+    }
+    
+    .bg-light {
+      background-color: var(--secondary-color) !important;
+    }
+    
+    .highlight {
+      color: var(--primary-dark);
+      font-weight: bold;
+    }
+    
+    .highlight-text {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    
+    footer {
+      background-color: var(--primary-dark) !important;
+    }
+    
+    a {
+      color: var(--primary-light);
+    }
+    
+    a:hover {
+      color: var(--primary-dark);
+    }
+    
+    /* Contact Form Styles */
+    .contact-form {
+      background-color: #E6E6FA; /* Lavender background */
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-form h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-form .form-control {
+      border: 1px solid var(--secondary-color);
+      padding: 0.75rem;
+    }
+    
+    .contact-form .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25);
+    }
+    
+    .contact-form textarea {
+      min-height: 150px;
+    }
+    
+    .contact-form .btn-primary {
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Rest of your HTML remains exactly the same -->
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">QuestMate</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img src="a.jpeg" alt="Adventure Banner" class="hero-img" />
+    
+    <div class="hero-text">
+      <h1>Welcome to QuestMate</h1>
+      <p>Your adventure planner companion</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search for adventures, locations, or activities...">
+    </div>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget">
+      <h3>Weather for Your Adventure</h3>
+      <div class="weather-info">
+        <div class="weather-icon">🌤️</div>
+        <div class="weather-details">
+          <p class="temperature">25°C</p>
+          <p class="location">Current Location</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="intro py-5">
+      <h2>Plan Your Next Quest</h2>
+      <p>Choose locations, invite friends, and track your journey with ease.</p>
+      <div class="d-flex gap-3">
+        <a href="register.html" class="btn btn-primary">Get Started</a>
+        <button class="share-btn" onclick="shareAdventure()">
+          <i class="fas fa-share-alt"></i> Share Adventure
+        </button>
+      </div>
+    </section>
+
+    <section class="features py-5 bg-light">
+      <div class="container">
+        <h2>Adventure Features</h2>
+        <p class="subheading">Everything you need to explore the world with confidence</p>
+        
+        <div class="row">
+          <!-- Card with background image -->
+          <div class="col-md-4 mb-4">
+            <div class="feature-card route-bg h-100">
+              <div class="icon">📍</div>
+              <h3>Smart Route Planning</h3>
+              <p>AI-powered itinerary builder suggests optimal routes based on your interests, fitness level, and time constraints.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="feature-card offline-bg h-100">
+              <div class="icon">📡</div>
+              <h3>Offline Navigation</h3>
+              <p>
+                Download detailed topographic maps and navigate without cell service in the most remote locations.
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="feature-card explorer-bg h-100">
+              <div class="icon">👥</div>
+              <h3>Explorer Community</h3>
+              <p>Connect with local guides and fellow adventurers to discover hidden gems and secret spots.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Locations Section -->
+    <section class="popular-locations py-5">
+      <div class="container">
+        <h2>Popular Destinations</h2>
+        <p class="subtitle">Discover the beauty of Pakistan's most vibrant cities</p>
+        
+        <div class="row mt-4">
+          <!-- Islamabad -->
+          <div class="col-md-4 mb-4">
+            <div class="location-card">
+              <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" alt="Margalla Hills, Islamabad" class="location-img">
+              <div class="location-content">
+                <h3>Islamabad</h3>
+                <p class="location-description">Pakistan's modern capital city, known for its clean environment and beautiful Margalla Hills.</p>
+                <div class="location-features">
+                  <span class="feature-tag">Margalla Hills</span>
+                  <span class="feature-tag">Faisal Mosque</span>
+                  <span class="feature-tag">Daman-e-Koh</span>
+                </div>
+                <button class="btn btn-primary mt-3" onclick="exploreLocation('Islamabad')">Explore</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lahore -->
+          <div class="col-md-4 mb-4">
+            <div class="location-card">
+              <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lahore" class="location-img">
+              <div class="location-content">
+                <h3>Lahore</h3>
+                <p class="location-description">The cultural heart of Pakistan, famous for its rich history, food, and vibrant atmosphere.</p>
+                <div class="location-features">
+                  <span class="feature-tag">Badshahi Mosque</span>
+                  <span class="feature-tag">Lahore Fort</span>
+                  <span class="feature-tag">Food Street</span>
+                </div>
+                <button class="btn btn-primary mt-3" onclick="exploreLocation('Lahore')">Explore</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karachi -->
+          <div class="col-md-4 mb-4">
+            <div class="location-card">
+              <img src="https://images.unsplash.com/photo-1599571234909-29ed5d1321d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Clifton Beach, Karachi" class="location-img">
+              <div class="location-content">
+                <h3>Karachi</h3>
+                <p class="location-description">Pakistan's largest city and economic hub, offering beautiful beaches and diverse culture.</p>
+                <div class="location-features">
+                  <span class="feature-tag">Clifton Beach</span>
+                  <span class="feature-tag">Port Grand</span>
+                  <span class="feature-tag">Food Street</span>
+                </div>
+                <button class="btn btn-primary mt-3" onclick="exploreLocation('Karachi')">Explore</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Activities Section -->
+    <section class="activities py-5 bg-light">
+      <div class="container">
+        <h2>Popular Activities</h2>
+        <p class="subtitle">Discover exciting things to do in each city</p>
+        
+        <div class="row mt-4">
+          <div class="col-md-3 mb-4">
+            <div class="activity-card">
+              <div class="activity-icon">🏔️</div>
+              <h4>Hiking</h4>
+              <p>Explore Margalla Hills trails</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="activity-card">
+              <div class="activity-icon">🍽️</div>
+              <h4>Food Tours</h4>
+              <p>Experience local cuisine</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="activity-card">
+              <div class="activity-icon">🏛️</div>
+              <h4>Heritage Walks</h4>
+              <p>Discover historical sites</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="activity-card">
+              <div class="activity-icon">🏖️</div>
+              <h4>Beach Activities</h4>
+              <p>Enjoy coastal adventures</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Forecast Section -->
+    <section class="weather-forecast py-5">
+      <div class="container">
+        <h2>Weather Forecast</h2>
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="weather-card">
+              <h3>Islamabad</h3>
+              <div class="weather-info">
+                <span class="temperature">25°C</span>
+                <span class="weather-icon">🌤️</span>
+              </div>
+              <p class="weather-desc">Partly Cloudy</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="weather-card">
+              <h3>Lahore</h3>
+              <div class="weather-info">
+                <span class="temperature">28°C</span>
+                <span class="weather-icon">☀️</span>
+              </div>
+              <p class="weather-desc">Sunny</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="weather-card">
+              <h3>Karachi</h3>
+              <div class="weather-info">
+                <span class="temperature">32°C</span>
+                <span class="weather-icon">🌞</span>
+              </div>
+              <p class="weather-desc">Hot</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section class="travel-tips py-5 bg-light">
+      <div class="container">
+        <h2>Travel Tips</h2>
+        <div class="row mt-4">
+          <div class="col-md-4 mb-4">
+            <div class="tip-card">
+              <h4>Best Time to Visit</h4>
+              <ul>
+                <li>Spring (March-May)</li>
+                <li>Autumn (September-November)</li>
+                <li>Avoid peak summer months</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="tip-card">
+              <h4>Local Transportation</h4>
+              <ul>
+                <li>Use ride-hailing apps</li>
+                <li>Public buses available</li>
+                <li>Metro services in major cities</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="tip-card">
+              <h4>Cultural Etiquette</h4>
+              <ul>
+                <li>Dress modestly</li>
+                <li>Respect local customs</li>
+                <li>Learn basic Urdu phrases</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose py-5">
+      <div class="container">
+        <h2>Why Choose <span class="highlight">QuestMate</span>?</h2>
+        <p class="subtitle">QuestMate makes every journey smarter, faster, and more enjoyable.</p>
+      
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h3>Top Features:</h3>
+            <ul>
+              <li><span class="highlight-text">Live traffic updates</span></li>
+              <li>AI-powered route optimization</li>
+              <li>Support for multiple languages</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3>Steps to Get Started:</h3>
+            <ol>
+              <li>Download the app</li>
+              <li>Set your destination</li>
+              <li>Enjoy your optimized route</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Contact Us</h5>
+          <p>ABC@gmail.com</p>
+          <p>12345678</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="features.html" class="text-white">Features</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p>&copy; 2023 QuestMate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" onclick="toggleDarkMode()">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+  <script src="javascript.js"></script>
+</body>
+</html>
